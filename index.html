@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Form To Enter Personal Data</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/all.min.css">
+    <link rel="stylesheet" href="all.min.css".css">
+    <link rel="shortcut icon" href="assets/img/icon.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <button class="bu" onclick="toggleDarkMode()"><i class="fa-regular fa-moon"></i></button>
+
+    <h2>Comprehensive Form To Enter Personal Data</h2>
+    <form action="form.php" method="post">
+
+        <label for="fname">First Name:</label><br>
+        <input required type="text" id="fname" name="fname" placeholder="ex: Haithem"
+            oninput="this.removeAttribute('placeholder');"><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="ex: Mohamed"
+            oninput="this.removeAttribute('placeholder');"><br>
+            <label for="time">Time Input:<br></label>
+            <input type="time" id="time" name="time">
+        <label for="date"><br>Date of Birth:</label><br>
+        <input type="date" id="date" name="date"><br>
+        <br>
+        <label for="email">Email:</label>
+        <input required type="email" id="email" name="email" placeholder="ex: example@example.com"
+            oninput="this.removeAttribute('placeholder');"><br>
+
+        <label for="password">Password:</label>
+        <input required type="password" id="password" name="password" placeholder="ex: Password123"
+            oninput="this.removeAttribute('placeholder');"><br>
+
+        <label for="re-password">Re-Password:</label>
+        <input required type="password" id="re-password" name="re-password" placeholder="ex: Password123"
+            oninput="this.removeAttribute('placeholder');"><br>
+
+        <label for="phone">Phone Number:</label>
+        <input required type="tel" id="phone" name="phone" placeholder="ex: 01143894042"
+            oninput="this.removeAttribute('placeholder');"><br>
+
+        <label for="age">Age:</label>
+        <input required type="number" id="age" name="age" placeholder="ex: 20"
+            oninput="this.removeAttribute('placeholder');"><br>
+
+        <label for="gender"><br>Gender:</label>
+        <br>
+        <label for="male">Male</label>
+        <input required type="radio" id="male" name="gender" value="male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female"><br>
+        <br>
+
+        <label for="country">Country:</label>
+        <select required id="country" name="country">
+            <option value="egypt">Egypt</option>
+            <option value="saudi">Saudi Arabia</option>
+            <option value="uae">United Arab Emirates</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <label for="gov">Government:</label>
+        <select required id="gov" name="gov">
+            <option value="beni swif">Beni Swif</option>
+            <option value="aswan">Aswan</option>
+            <option value="cairo">Cairo</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+
+        <label for="color">Favorite Color:</label><br>
+        <input type="color" id="color" name="color" oninput="changeTextColor();"><br><br>
+        <span id="fav-color-text">This is your favorite color: <span id="selected-color"></span></span><br><br>
+        <label for="cv">CV (PDF or Word only):</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx"><br><br>
+        <label>Languages:</label><br>
+        <label for="arabic">Arabic</label>
+        <input type="checkbox" id="arabic" name="language[]" value="arabic">
+        <label for="english">English</label>
+        <input type="checkbox" id="english" name="language[]" value="english">
+        <label for="french">French</label>
+        <input type="checkbox" id="french" name="language[]" value="french">
+        <label for="other-language">Other</label>
+        <input type="checkbox" id="other-language" name="language[]" value="other">
+
+
+        <label for="message"><br>Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="ex: Your message here"
+            oninput="this.removeAttribute('placeholder');"></textarea><br><br>
+
+        <input class="button" type="submit" value="Submit">
+    </form>
+
+    <script>
+        function checkPasswords() {
+            var password = document.getElementById("password").value;
+            var rePassword = document.getElementById("re-password").value;
+            if (password !== rePassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            return true;
+        }
+        function validateForm() {
+            if (!checkPasswords()) {
+                return false;
+            }
+            return true;
+        }
+
+        function changeTextColor() {
+            var colorInput = document.getElementById("color");
+            var textColor = document.getElementById("fav-color-text");
+            var selectedColor = document.getElementById("selected-color");
+
+            textColor.style.color = colorInput.value;
+            selectedColor.innerText = colorInput.value;
+        }
+  
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+
+</html>

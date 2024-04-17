@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(123, 177, 219);
+
+    padding: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    font-style: oblique;
+
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select,
+textarea,
+input[type="color"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus,
+input[type="color"]:focus {
+    border-color: #00bfff;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color:  rgb(123, 177, 219);
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color:  rgb(0, 145, 255);
+}
+
+select {
+    height: 40px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+input[type="tel"]:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="file"]:focus {
+    border-color: #00bfff;
+    outline: none;
+}
+
+/* Dark Mode */
+.dark-mode body {
+color: #ccc;
+background-color: #333;
+}
+.dark-mode form {
+    background-color: rgb(39, 21, 63);
+    color: rgb(255, 255, 255);
+}
+
+.bu {
+    border-radius: 100%;
+    font-size: large;
+    font-style: oblique;
+    margin-left: 95%;
+    cursor: pointer;
+}
+.bu:hover{
+    background-color:rgb(39,21,63);
+    color: rgb(123,177,219);
+}
+.dark-mode .button{
+   background-color: #fff;
+   color: #151515;
+}
+.dark-mode .button:hover{
+    color: rgb(192, 192, 192);
+    background-color: rgb(122, 89, 166);
+
+}
